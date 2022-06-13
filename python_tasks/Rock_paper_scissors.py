@@ -1,6 +1,7 @@
 import random
 
 print(f"\nR is Rock\nP is paper\nS is scissors\n")
+random.choice( ["R", "P", "S"] )
 player1_choice = input("choose one: R, P or S?")
 choices = ["R", "P", "S"]
 computer_choice = random.choice(choices)
