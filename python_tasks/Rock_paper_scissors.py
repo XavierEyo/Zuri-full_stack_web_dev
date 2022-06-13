@@ -1,27 +1,24 @@
 import random
 
-print(f"\nR is Rock\nP is paper\nS is scissors\n")
-random.choice( ["R", "P", "S"] )
-player1_choice = input("choose one: R, P or S?")
-choices = ["R", "P", "S"]
-computer_choice = random.choice(choices)
-print(f"\nYou chose {player1_choice}, computer chose {computer_choice}.\n")
+player1 = input("Enter a choice (r, p, s): ")
+options = ["r", "p", "s"]
+computer = random.choice(options)
+print(f"\nYou chose {player1}, computer chose {computer}.\n")
 
-if player_1_choice == computer_choice:
-    print(f"Both players selected {player_1_choice}. It's a draw!")
-elif player1_choice == "R":
-    if computer_choice == "S":
+if player1 == computer:
+    print(f"Both players selected {player1}. It's a tie!")
+elif player1 == "r":
+    if computer == "s":
         print("Rock smashes scissors! You win!")
     else:
         print("Paper covers rock! You lose.")
-elif player1_choice == "P":
-    if computer_choice == "R":
+elif player1 == "p":
+    if computer == "r":
         print("Paper covers rock! You win!")
     else:
         print("Scissors cuts paper! You lose.")
-elif player1_choice == "S":
-    if computer_choice == "P":
+elif player1 == "s":
+    if computer == "p":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
-
